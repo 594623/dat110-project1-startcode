@@ -41,8 +41,17 @@ public class MessagingServer {
 		
 		
 
+<<<<<<< HEAD
 		//if (true)
 			//throw new UnsupportedOperationException(TODO.method());
+=======
+		try {
+			Socket socket = welcomeSocket.accept();
+			connection = new Connection(socket);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+>>>>>>> branch 'master' of https://github.com/594623/dat110-project1-startcode.git
 		
 		// TODO - END
 		

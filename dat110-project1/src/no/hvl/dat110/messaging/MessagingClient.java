@@ -19,9 +19,15 @@ public class MessagingClient {
 	}
 	
 	// connect to messaging server
+<<<<<<< HEAD
 	public Connection connect () {
 			
 		Socket clientSocket = null;
+=======
+	public Connection connect() {
+		
+		Socket clientSocket;
+>>>>>>> branch 'master' of https://github.com/594623/dat110-project1-startcode.git
 		Connection connection = null;
 		
 		// TODO - START
@@ -32,6 +38,7 @@ public class MessagingClient {
 			connection = new Connection(clientSocket);
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
+<<<<<<< HEAD
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -45,6 +52,11 @@ public class MessagingClient {
 		
 		//if (true)
 			//throw new UnsupportedOperationException(TODO.method());
+=======
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+>>>>>>> branch 'master' of https://github.com/594623/dat110-project1-startcode.git
 		
 		// TODO - END
 		return connection;

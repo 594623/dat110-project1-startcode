@@ -32,7 +32,7 @@ public class Connection {
 		}
 	}
 
-	public void send(Message message) {
+	public void send(Message message) throws IOException {
 
 		byte[] data;
 		
@@ -41,18 +41,22 @@ public class Connection {
 		
 		data = MessageUtils.encapsulate(message);
 		
+<<<<<<< HEAD
 		try {
 			outStream.write(data);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+=======
+		outStream.write(data);
+>>>>>>> branch 'master' of https://github.com/594623/dat110-project1-startcode.git
 			
 		// TODO - END
 
 	}
 
-	public Message receive() {
+	public Message receive() throws IOException {
 
 		Message message = null;
 		byte[] data = null;
@@ -60,6 +64,7 @@ public class Connection {
 		// TODO - START
 		// read a segment from the input stream and decapsulate into message
 		
+<<<<<<< HEAD
 	    try {
 			data = inStream.readNBytes(128);
 		} catch (IOException e) {
@@ -71,6 +76,11 @@ public class Connection {
 		
 		//if (true)
 			//throw new UnsupportedOperationException(TODO.method());
+=======
+		data = inStream.readNBytes(128);
+		
+		message = MessageUtils.decapsulate(data);
+>>>>>>> branch 'master' of https://github.com/594623/dat110-project1-startcode.git
 		
 		// TODO - END
 		

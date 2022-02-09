@@ -8,6 +8,9 @@ public class Message {
 		
 		// TODO - START
 		
+		if (data == null) throw new IllegalArgumentException("Data cannot be null.");
+		if (data.length > 127) throw new IllegalArgumentException("Data cannot be longer than 127 bytes.");
+		
 		this.data = data;
 		
 		// TODO - END

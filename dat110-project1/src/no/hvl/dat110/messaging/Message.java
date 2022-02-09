@@ -4,14 +4,16 @@ import no.hvl.dat110.TODO;
 
 public class Message {
 
-	private byte[] data;
+	byte[] data;
 
 	public Message(byte[] data) {
 		
 		// TODO - START
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.constructor("Message"));
+		this.data = data; 
+		
+		if (data.length>127 || data == null)
+			throw new UnsupportedOperationException(TODO.constructor("Feil data"));
 			
 		// TODO - END
 	}

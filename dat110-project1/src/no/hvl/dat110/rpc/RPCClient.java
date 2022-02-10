@@ -18,8 +18,7 @@ public class RPCClient {
 		// TODO - START
 		// connect using the underlying messaging layer connection
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+		connection = msgclient.connect();
 		
 		// TODO - END
 	}
@@ -29,8 +28,8 @@ public class RPCClient {
 		// TODO - START
 		// disconnect/close the underlying messaging connection
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+		connection.close();
+		connection = null;
 		
 		// TODO - END
 	}
@@ -53,8 +52,9 @@ public class RPCClient {
 			
 		*/
 				
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+		byte[] rpcmsg = RPCUtils.encapsulate(rpcid, params);
+		connection.send(new Message(rpcmsg));
+		returnval = connection.receive().getData();
 		
 		// TODO - END
 		return returnval;

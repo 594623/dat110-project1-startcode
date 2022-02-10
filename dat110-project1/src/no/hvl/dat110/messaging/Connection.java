@@ -67,8 +67,6 @@ public class Connection {
 	    
 	    message = MessageUtils.decapsulate(data);
 		
-		data = inStream.readNBytes(128);
-		
 		// TODO - END
 		
 		return message;

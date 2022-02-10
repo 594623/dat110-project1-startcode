@@ -87,12 +87,7 @@ public class RPCUtils {
 
 		byte[] encoded = null;
 
-		// TODO - START
-
-		/*if (true)
-			throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END*/
+		
 
 		return encoded;
 
@@ -102,8 +97,8 @@ public class RPCUtils {
 
 		// TODO
 
-		if (true)
-			throw new UnsupportedOperationException(TODO.method());
+		//if (true)
+			//throw new UnsupportedOperationException(TODO.method());
 
 	}
 
@@ -135,14 +130,6 @@ public class RPCUtils {
 		buffer.putInt(x);
 		buffer.rewind();
 		encoded = buffer.array();
-		
-		/*ByteBuffer b = ByteBuffer.allocate(x);
-		b.putInt(x);
-		
-		encoded = b.array();*/
-
-		/*if (true)
-			throw new UnsupportedOperationException(TODO.method());*/
 
 		// TODO - END
 
@@ -159,9 +146,6 @@ public class RPCUtils {
 		buffer.put(data);
 		buffer.rewind();
 		decoded = buffer.getInt();
-
-		/*if (true)
-			throw new UnsupportedOperationException(TODO.method());*/
 
 		// TODO - END
 

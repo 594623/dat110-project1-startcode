@@ -31,7 +31,7 @@ public class RPCUtils {
 
 	public static byte[] decapsulate(byte[] rpcmsg) {
 
-		byte[] payload = new byte[rpcmsg.length-1];
+		byte[] payload = new byte[rpcmsg.length - 1];
 		byte rpcid = rpcmsg[0];
 
 		// TODO - START
@@ -56,11 +56,9 @@ public class RPCUtils {
 		byte[] encoded = null;
 
 		encoded = str.getBytes();
-		
-		
 
-		//if (true)
-			//throw new UnsupportedOperationException(TODO.method());
+		// if (true)
+		// throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - END
 
@@ -129,11 +127,8 @@ public class RPCUtils {
 		int decoded = 0;
 
 		// TODO - START
-		
-		ByteBuffer buffer = ByteBuffer.allocate(Integer.BYTES);
-		buffer.put(data);
-		buffer.rewind();
-		decoded = buffer.getInt();
+
+		decoded = ByteBuffer.wrap(data).getInt();
 
 		// TODO - END
 

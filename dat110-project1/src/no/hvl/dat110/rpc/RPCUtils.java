@@ -71,15 +71,6 @@ public class RPCUtils {
 
 		String decoded = new String(data);
 
-		// TODO - START
-		
-		
-
-		//if (true)
-			//throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - END
-
 		return decoded;
 	}
 

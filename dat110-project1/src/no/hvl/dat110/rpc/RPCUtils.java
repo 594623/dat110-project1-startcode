@@ -78,7 +78,7 @@ public class RPCUtils {
 
 		byte[] encoded = null;
 
-		
+		encoded = new byte[0];
 
 		return encoded;
 
@@ -86,10 +86,7 @@ public class RPCUtils {
 
 	public static void unmarshallVoid(byte[] data) {
 
-		// TODO
-
-		//if (true)
-			//throw new UnsupportedOperationException(TODO.method());
+		return;
 
 	}
 

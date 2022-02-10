@@ -54,7 +54,7 @@ public class RPCClient {
 				
 		byte[] rpcmsg = RPCUtils.encapsulate(rpcid, params);
 		connection.send(new Message(rpcmsg));
-		returnval = connection.receive().getData();
+		returnval = RPCUtils.decapsulate(connection.receive().getData());
 		
 		// TODO - END
 		return returnval;
